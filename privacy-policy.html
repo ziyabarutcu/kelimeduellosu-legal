@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kelime Düellosu — Gizlilik Politikası</title>
+<style>
+  body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;max-width:760px;margin:24px auto;padding:0 16px;line-height:1.55;color:#17233b}
+  h1{font-size:26px} h2{margin-top:26px} table{border-collapse:collapse;width:100%;font-size:14px}
+  td,th{border:1px solid #c9d4ea;padding:7px;text-align:left;vertical-align:top}
+  .todo{background:#fff3cd;border:1px dashed #d6a700;padding:2px 6px;border-radius:4px}
+  a{color:#0a4ffa}
+</style>
+</head>
+<body>
+<h1>Kelime Düellosu — Gizlilik Politikası</h1>
+<p><em>Son güncelleme: 20 Ekim 2026</em><br>
+Geliştirici: <span class="todo">[TODO: ad / unvan]</span><br>
+İletişim: <span class="todo">[TODO: destek e-postası]</span></p>
+
+<p>Bu politika, <strong>Kelime Düellosu</strong> mobil oyununun (paket: <code>com.ezgames.kelimeduellosu</code>) hangi verileri, neden işlediğini açıklar.</p>
+
+<h2>1. Topladığımız veriler</h2>
+<table>
+<tr><th>Veri</th><th>Amaç</th><th>Nerede saklanır</th></tr>
+<tr><td>Hesap kimliği (Firebase UID); Google ile girişte temel profil bilgisi (ad/fotoğraf URL'si) veya misafir hesabı</td><td>Giriş, profil, ilerleme</td><td>Firebase Authentication + Firestore</td></tr>
+<tr><td>Oyuncu adı, avatar/çerçeve, istatistikler, altın/elmas bakiyesi, VIP/Reklamsız durumu, can durumu</td><td>Oyun ilerlemesi ve ekonomi</td><td>Firestore (users/{uid})</td></tr>
+<tr><td>Cihaz kimliğinin hash'lenmiş hali (SHA-1)</td><td>Misafir hesabını aynı cihazda geri getirmek</td><td>Firestore / cihaz</td></tr>
+<tr><td>Maç durumu, çevrimiçi durumu, arkadaş listesi ve istekleri</td><td>Online maç ve sosyal özellikler</td><td>Firebase Realtime Database + Firestore</td></tr>
+<tr><td>Sohbet mesajları (arkadaşlar arası, VIP)</td><td>Özel mesajlaşma</td><td>Firebase</td></tr>
+<tr><td>Reklam tanımlayıcısı ve reklam etkileşim verileri</td><td>AdMob reklam gösterimi ve ölçümü</td><td>Google AdMob (§3)</td></tr>
+<tr><td>Cihaz/uygulama bilgileri (Firebase/AdMob SDK'larının otomatik topladığı kadarıyla)</td><td>Hata ayıklama, güvenlik</td><td>Google Firebase / AdMob</td></tr>
+</table>
+<p><strong>Toplamadıklarımız:</strong> konum (GPS), kişiler, fotoğraf galerisi, ödeme kartı bilgileri (satın almalar Google Play üzerinden yapılır; kart bilginiz bize ulaşmaz).</p>
+
+<h2>2. Verileri nasıl kullanıyoruz?</h2>
+<ul>
+<li>Oyunu çalıştırmak: giriş, eşleşme, maç senkronu, profil ve bakiyeleri kaydetmek.</li>
+<li>Sosyal özellikler: arkadaş ekleme, liderlik tablosu, sohbet.</li>
+<li>Güvenlik ve kötüye kullanım önleme: hile/istismar tespiti, engelleme/şikâyet.</li>
+<li>Reklam: AdMob ile ödüllü ve geçiş reklamları göstermek (VIP/Reklamsız kullanıcılara geçiş reklamı gösterilmez).</li>
+</ul>
+<p>Verilerinizi <strong>satmıyoruz</strong>.</p>
+
+<h2>3. Üçüncü taraf hizmetler</h2>
+<ul>
+<li><a href="https://firebase.google.com/support/privacy">Google Firebase</a> (Authentication, Firestore, Realtime Database)</li>
+<li><a href="https://policies.google.com/technologies/ads">Google AdMob</a> — Cihaz ayarlarından reklam kişiselleştirmeyi kapatabilirsiniz.</li>
+<li><a href="https://policies.google.com/privacy">Google Sign-In</a></li>
+</ul>
+
+<h2>4. Saklama ve güvenlik</h2>
+<p>Veriler aktarımda TLS ile şifrelenir. Hesabınız aktif olduğu sürece oyun verileriniz saklanır.</p>
+
+<h2>5. Çocuklar</h2>
+<p>Oyun 13 yaş altına yönelik tasarlanmamıştır. 13 yaşın altında olduğunuzu öğrenirsek hesabın silinmesi için iletişime geçin.</p>
+
+<h2>6. Haklarınız ve hesap silme</h2>
+<p>Hesabınızı uygulama içinden <strong>Profil → Ayarlar → Hesabımı Sil</strong> yoluyla kalıcı olarak silebilirsiniz. Ayrıca <a href="delete-account.html">hesap silme sayfasından</a> ve <span class="todo">[TODO: destek e-postası]</span> üzerinden talep edebilirsiniz. Yasal saklama zorunluluğu yoksa verileriniz makul süre içinde silinir.</p>
+
+<h2>7. Değişiklikler</h2>
+<p>Bu politikayı güncellersek yeni sürümü bu sayfada yayınlar ve tarihi değiştiririz.</p>
+</body>
+</html>
